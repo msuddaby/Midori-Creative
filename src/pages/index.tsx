@@ -8,6 +8,7 @@ import WhoIsMidori from "@/components/WhoIsMidori";
 import LogoHeader from "@/components/LogoHeader";
 import TagLine from "@/components/TagLine";
 import WhatDoesSheDo from "@/components/WhatDoesSheDo";
+import BestOf from "@/components/BestOf";
 
 const inter = Inter({ subsets: ["latin"] });
 
@@ -31,9 +32,10 @@ export default function Home() {
     >
       <div id={"smooth-content"}>
         <LogoHeader />
-        {/*<TagLine />*/}
+        <TagLine />
         <WhoIsMidori />
         <WhatDoesSheDo />
+        <BestOf />
       </div>
     </main>
   );

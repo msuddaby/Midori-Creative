@@ -101,22 +101,9 @@ export default function WhoIsMidori() {
                 <div className={"whois-mask-container"}>
                     <p
                         className={"lineSplit text-5xl lg:text-7xl font-bold leading-normal lg:leading-normal whois-content"}>
-                        Lorem ipsum dolor sit amet consectetur adipisicing elit. Cumque
-                        nobis quidem numquam cum aspernatur dolorem rem, molestias id
-                        omnis architecto. Nisi doloribus voluptate explicabo maxime,
-                        impedit sed eaque? Vel, provident? Repellendus esse voluptatem
-                        quae debitis ipsum veniam harum numquam quidem delectus. Aliquam
-                        corporis quidem unde. Unde, iure, alias similique dolorum
-                        voluptas culpa, eveniet velit harum commodi aliquid quam
-                        voluptatem nobis. Voluptates recusandae voluptatum facilis
-                        delectus laudantium qui animi exercitationem at ipsum est.
-                        Voluptatum sed, rerum hic ducimus, doloremque, eaque inventore
-                        illo aliquid aperiam illum blanditiis sequi exercitationem
-                        pariatur numquam fugiat. Similique, itaque facere et dolor
-                        laborum voluptates eveniet? Id quod saepe cum, rem neque, quam
-                        ipsam nihil quidem, nostrum harum accusantium quo nam quasi ex
-                        cumque omnis consectetur deserunt laudantium!
-
+                        There’s two ways to answer this, the official way: Midori Creative is a creative studio focused on helping Chinese brands create high end brand content that resonates with audiences around the world... the way we prefer is: we’re storytellers first and foremost that just like to create cool stuff.
+                        We believe that the power of a great story can truly change things for the better, no matter who you are or where you live.
+                        Midori and her team of global dreamers, storytellers, alchemists, and whatever other crazy word you can think of are here to do just that, because in the end we feel we’re really here to do one thing and one thing only: make new worlds 🌎
                     </p>
                 </div>
             </div>
