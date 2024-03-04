@@ -1,0 +1,53 @@
+.carouselContainer {
+    position: relative;
+    overflow-x: scroll;
+    scrollbar-width: none;
+  }
+  
+  .cardContainer {
+    list-style-type: none;
+    display: flex;
+    gap: 1rem;
+    padding: 0;
+    margin: 0;
+  }
+  
+  .cardGalleryItem {
+    flex: none;
+    width: 700px; /* Your card width */
+    scroll-snap-align: start;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: #f5f5f5;
+    border-radius: 10px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    padding: 1rem;
+    transition: transform 0.5s ease, opacity 0.5s ease;
+  }
+  
+  .cardItem img {
+    width: 100%;
+    height: auto;
+  }
+  
+  .current .cardItem {
+    transform: scale(1);
+    opacity: 1;
+  }
+  
+  .cardGalleryItem:not(.current) .cardItem {
+    transform: scale(0.7);
+    opacity: 0.5;
+  }
+  
+  .buttonContainer {
+    display: flex;
+    justify-content: space-between;
+    margin-top: 1rem;
+  }
+  
+  .button {
+    padding: 0.5rem 1rem;
+    cursor: pointer;
+  }

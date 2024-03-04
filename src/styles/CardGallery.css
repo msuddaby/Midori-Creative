@@ -1,0 +1,37 @@
+:root {
+    --card-width: 700px;
+}
+
+.card-scroll-container {
+    scroll-snap-type: x mandatory;
+    position: relative;
+    overflow-x: scroll;
+    scrollbar-width: none;
+}
+
+.card-container {
+    margin: 0;
+    position: relative;
+    display: grid;
+    gap: 1rem;
+    grid-auto-flow: column;
+    width: fit-content;
+    list-style-type: none;
+    padding-left: calc(50% - var(--card-width) / 2);
+    padding-right: calc(50% - var(--card-width) / 2);
+}
+
+.disabled {
+    pointer-events: none;
+    opacity: 0.5;
+    cursor: not-allowed;
+}
+
+.card-item {
+    transition: transform 0.5s ease, opacity 0.5s ease;
+}
+
+.card-item img {
+    max-width: unset;
+    border-radius: 3rem;
+}

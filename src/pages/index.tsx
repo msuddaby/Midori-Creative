@@ -1,6 +1,6 @@
 import Image from "next/image";
 import { Inter } from "next/font/google";
-import {useEffect, useLayoutEffect} from "react";
+import { useEffect, useLayoutEffect } from "react";
 import { ScrollSmoother } from "gsap-trial/dist/ScrollSmoother";
 import { ScrollTrigger } from "gsap-trial/dist/ScrollTrigger";
 import gsap from "gsap-trial";
@@ -13,7 +13,6 @@ import BestOf from "@/components/BestOf";
 const inter = Inter({ subsets: ["latin"] });
 
 export default function Home() {
-
   useEffect(() => {
     gsap.registerPlugin(ScrollTrigger, ScrollSmoother);
 
@@ -22,7 +21,6 @@ export default function Home() {
       effects: true, // looks for data-speed and data-lag attributes on elements
       smoothTouch: 0.1, // much shorter smoothing time on touch devices (default is NO smoothing on touch devices)
     });
-
   }, []);
 
   return (
@@ -31,10 +29,10 @@ export default function Home() {
       id={"smooth-wrapper"}
     >
       <div id={"smooth-content"}>
-        <LogoHeader />
-        <TagLine />
-        <WhoIsMidori />
-        <WhatDoesSheDo />
+        {/* <LogoHeader /> */}
+        {/*<TagLine />*/}
+        {/* <WhoIsMidori />
+        <WhatDoesSheDo /> */}
         <BestOf />
       </div>
     </main>

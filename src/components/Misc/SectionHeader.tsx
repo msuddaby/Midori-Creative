@@ -66,8 +66,8 @@ export default function SectionHeader({ title, subTitle }: SectionHeaderProps) {
 
     return (
         <div ref={sectionRef} className={"section-header"}>
-            {title && <h2 ref={h2Ref} className={"section-title text-2xl uppercase text-white mb-4 opacity-0"}>{title}</h2>}
-            <hr ref={hrRef} className={"section-hr border-neutral-600 my-4 w-[0px]"}/>
+            {title && <h2 ref={h2Ref} className={"section-title text-5xl uppercase text-white mb-6 opacity-0"}>{title}</h2>}
+            <hr ref={hrRef} className={"section-hr border-neutral-600 my-8 w-[0px]"}/>
             {subTitle && <div ref={subTitleRef} className={"flex items-center gap-2 section-subtitle opacity-0"}>
                 <IoIosArrowDropright />
                 <span className={"uppercase font-light text-neutral-300 text-lg"}>{subTitle}</span>
