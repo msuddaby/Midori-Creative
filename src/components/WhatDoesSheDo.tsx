@@ -78,21 +78,21 @@ export default function WhatDoesSheDo() {
                 </li>
               </ul>
             </div>
-            <div className="md:w-[49%]">
+            <div className="md:w-[49%] mb-3">
               <p ref={textRef}>{listContent[active]}</p>
             </div>
           </div>
-          <div className="flex gap-2">
+          <div className="flex flex-col md:flex-row gap-2">
             <div>
               <img
                 src="https://picsum.photos/1200/1200"
-                className="w-full h-full object-cover"
+                className="w-full h-full object-cover inline-block"
               />
             </div>
             <div>
               <img
                 src="https://picsum.photos/1200/1200"
-                className="w-full h-full object-cover"
+                className="w-full h-full object-cover inline-block"
               />
             </div>
           </div>
