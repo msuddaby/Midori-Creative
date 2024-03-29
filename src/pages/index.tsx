@@ -33,7 +33,8 @@ export default function Home() {
         {/*<TagLine />*/}
         {/* <WhoIsMidori />
         <WhatDoesSheDo /> */}
-        <BestOf />
+        {/* <BestOf /> */}
+        <WhatDoesSheDo />
       </div>
     </main>
   );
