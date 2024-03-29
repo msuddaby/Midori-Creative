@@ -15,7 +15,7 @@ const listContent = [
 
 export default function WhatDoesSheDo() {
   const [active, setActive] = useState(0);
-  const textRef = useRef(null);
+  const textRef = useRef<HTMLParagraphElement | null>(null);
 
   useEffect(() => {
     // Animate typing effect
@@ -26,71 +26,75 @@ export default function WhatDoesSheDo() {
         opacity: 1,
         duration: 1,
         delay: 0,
-        onComplete: () => {
-          const text = listContent[active];
-          let index = 0;
-          const typingInterval = setInterval(() => {
-            textRef.current.textContent += text[index];
-            index++;
-            if (index === text.length) {
-              clearInterval(typingInterval);
-            }
-          });
-        },
+        // onComplete: () => {
+        //   const text = listContent[active];
+        //   let index = 0;
+        //   const typingInterval = setInterval(() => {
+        //     textRef.current.textContent += text[index];
+        //     index++;
+        //     if (index === text.length) {
+        //       clearInterval(typingInterval);
+        //     }
+        //   });
+        // },
       }
     );
   }, [active]);
 
-  const handleItemClick = (index) => {
-    textRef.current.textContent = ""; // Clear previous text
+  const handleItemClick = (index: number) => {
+    if (!textRef.current) return;
+    //textRef.current.textContent = ""; // Clear previous text
+
     setActive(index);
   };
 
   return (
     <>
-      <section className="min-h-screen max-w-[85vw] m-auto">
+      <section className="min-h-screen max-w-[85vw] m-auto flex flex-col">
         <div className="">
           <SectionHeader title={"What does she do?"} />
         </div>
-        <div className="flex gap-4 flex-col md:flex-row">
-          <div className="md:w-[49%]">
-            <ul className="font-bold uppercase text-2xl">
-              <li
-                className={active === 0 ? liActive : liInactive}
-                onClick={() => handleItemClick(0)}
-              >
-                Content Creation
-              </li>
-              <li
-                className={active === 1 ? liActive : liInactive}
-                onClick={() => handleItemClick(1)}
-              >
-                Social Media Strategy
-              </li>
-              <li
-                className={active === 2 ? liActive : liInactive}
-                onClick={() => handleItemClick(2)}
-              >
-                Talent Management
-              </li>
-            </ul>
+        <div className="h-full flex flex-col justify-between flex-grow p-4">
+          <div className="flex gap-4 flex-col md:flex-row">
+            <div className="md:w-[49%]">
+              <ul className="font-bold uppercase text-2xl">
+                <li
+                  className={active === 0 ? liActive : liInactive}
+                  onClick={() => handleItemClick(0)}
+                >
+                  Content Creation
+                </li>
+                <li
+                  className={active === 1 ? liActive : liInactive}
+                  onClick={() => handleItemClick(1)}
+                >
+                  Social Media Strategy
+                </li>
+                <li
+                  className={active === 2 ? liActive : liInactive}
+                  onClick={() => handleItemClick(2)}
+                >
+                  Talent Management
+                </li>
+              </ul>
+            </div>
+            <div className="md:w-[49%]">
+              <p ref={textRef}>{listContent[active]}</p>
+            </div>
           </div>
-          <div className="md:w-[49%]">
-            <p ref={textRef}></p>
-          </div>
-        </div>
-        <div className="flex gap-2">
-          <div>
-            <img
-              src="https://picsum.photos/1200/1200"
-              className="w-full h-full object-cover"
-            />
-          </div>
-          <div>
-            <img
-              src="https://picsum.photos/1200/1200"
-              className="w-full h-full object-cover"
-            />
+          <div className="flex gap-2">
+            <div>
+              <img
+                src="https://picsum.photos/1200/1200"
+                className="w-full h-full object-cover"
+              />
+            </div>
+            <div>
+              <img
+                src="https://picsum.photos/1200/1200"
+                className="w-full h-full object-cover"
+              />
+            </div>
           </div>
         </div>
       </section>
